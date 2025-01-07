@@ -1,3 +1,7 @@
+<div align="center">
+  <img src="" alt="MouriCok" width="200">
+</div>
+
 # Personal Portfolio Website
 
 Welcome to my personal portfolio website! This is a static HTML site hosted on GitHub Pages to showcase my skills, projects, and experience. 
@@ -19,7 +23,7 @@ A list of technical skills, including:
 - Tools: Git, GitHub
 
 ### 4. Contact
-- **Email:** [Bukhoury Muslim](mailto:mbukhoury.mb@gmail.com)
+- **Email:** [mbukhoury.mb@gmail.com](mailto:mbukhoury.mb@gmail.com)
 
 ## Hosting on GitHub Pages
 This project is hosted on GitHub Pages. To view the live website, visit: 
