@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <link rel="icon" href="./Assets/b-logo.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body id="page-top">
+    <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+        <div class="nav-container">
+            <a href="#page-top"><img class="logo" src="./Assets/b-logo.png" alt="Logo"> <img class="logo-text" src="./Assets/BM-text.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                Menu
+                <i class="fas fa-bars ms-1"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li><a class="nav-item" href="#works">Works</a></li>
+                    <li><a class="nav-item" href="#about">About</a></li>
+                    <li><a class="nav-item" href="#awards">Awards</a></li>
+                </ul>
+                <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <li><a class="nav-icon fb" href="https://www.facebook.com/muhammad.bukhoury/" target="_blank"><img src="./Assets/facebook.png" alt="Facebook"></a></li>
+                    <li><a class="nav-icon ig" href="https://www.instagram.com/bukhourymuslim/" target="_blank"><img src="./Assets/instagram.png" alt="Instagram"></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Header -->
+    <header class="masthead">
+        <div class="container">
+            <div class="hero-text" style="text-align: right;">
+                <h2>Web Developer</h2>
+                <h1>BUKHOURY MUSLIM</h1>
+                <p>A place where I showcase my skills, projects, and experience.</p>
+                <button type="button" class="works-btn" onclick="window.location.href='#works'">
+                    <svg class="works-icon" width="18px" height="18px" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" fill="#000000">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier"> <title>briefcase-solid</title> <g id="Layer_2" data-name="Layer 2"> 
+                            <g id="invisible_box" data-name="invisible box"> <rect width="48" height="48" fill="none"></rect> </g> 
+                            <g id="Q3_icons" data-name="Q3 icons"> <path d="M26,31v3.5H22V31c-8-.4-15.1-2.9-20-6.6V42a2,2,0,0,0,2,2H44a2,2,0,0,0,
+                                2-2V24.4C41.1,28.1,34,30.6,26,31ZM44,12H33V6a2,2,0,0,0-2-2H17a2,2,0,0,0-2,2v6H4a2,2,0,0,0-2,2v5c4.3,4.7,12.6,8,22,
+                                8s17.7-3.3,22-8V14A2,2,0,0,0,44,12ZM29,12H19V8H29Z"></path> </g> </g> </g></svg>
+                    Explore My Works
+                </button>
+            </div>
+            <div class="hero-image">
+                <img src="./Assets/b-logo.png" alt="">
+            </div>
+        </div>
+    </header>
+
+    <!-- Works Section -->
+    <section id="works" class="works">
+        <h2>My Works</h2><br>
+        <div class="work-items">
+            <div class="work-part">
+                <div class="work-item">
+                    <h3>01</h3>
+                    <h4>PlayZone</h4>
+                    
+                </div>
+                <div class="work-text">
+                    <p>Sport Facility Booking System</p>
+                    <span class="description">A cutting-edge Sport Facility Booking System designed to simplify and streamline the process of booking sports venues. PlayZone is an all-in-one solution for managing facility reservations, payment processing, and user experiences. This system caters to both sports facility administrators and users, providing an intuitive and user-friendly platform for real-time bookings.</span>
+                    <button type="button" class="works-btn" onclick="openModal('playzoneModal')">View Details</button>
+                </div>
+            </div>
+            <div class="work-part">
+                <div class="work-text" style="text-align: right; align-items: flex-end;">
+                    <p>Sign Language Detection Website</p>
+                    <span class="description">A revolutionary Sign Language Detection Website aimed at bridging the communication gap between the hearing and deaf communities. Sentuhan Isyarat leverages advanced AI-based computer vision models to detect and interpret sign language gestures in real time, providing text-based outputs for better communication.</span>
+                    <button type="button" class="works-btn" onclick="openModal('sentuhanModal')">View Details</button>
+                </div>
+                <div class="work-item">
+                    <h3>02</h3>
+                    <h4>Sentuhan<br>Isyarat</h4>
+                    
+                </div>
+            </div>
+            <div class="work-part">
+                <div class="work-item">
+                    <h3>03</h3>
+                    <h4>Others</h4>
+                    
+                </div>
+                <div class="work-text">
+                    <p>All remaining projects I have worked on</p>
+                    <span class="description">Over the years, I’ve worked on a variety of web and software development projects that reflect my passion for coding and problem-solving. These projects span different domains, including website development, database management, and game development.</span>
+                    <a href="https://github.com/MouriCok/" class="works-btn" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modals -->
+    <div id="playzoneModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('playzoneModal')">&times;</span>
+            <h2>PlayZone</h2>
+            <p>A comprehensive Sport Facility Booking System designed to streamline reservations, manage payments, and improve user experience. This project includes both a web application and a mobile app.</p>
+            <div class="modal-gallery">
+                <img src="./Assets/PlayZone-Homepage.png" alt="PlayZone Homepage">
+                <img src="./Assets/PlayZone-Features.png" alt="PlayZone Features">
+                <img src="./Assets/PlayZone-Admin.png" alt="PlayZone Admin Panel">
+            </div>
+        </div>
+    </div>
+
+    <div id="sentuhanModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal('sentuhanModal')">&times;</span>
+            <h2>Sentuhan Isyarat</h2>
+            <p>A Sign Language Detection Website developed to bridge the communication gap for individuals with hearing disabilities. The project leverages AI models to detect and translate sign language into text in real time.</p>
+            <div class="modal-gallery">
+                <img src="./Assets/SentuhanIsyarat-Homepage.png" alt="Sentuhan Isyarat Homepage">
+                <img src="./Assets/SentuhanIsyarat-Detection.png" alt="Sentuhan Isyarat Detection">
+            </div>
+        </div>
+    </div>
+
+    <!-- Conferences Section -->
+    <section id="conferences" class="conferences">
+        <h2>Conferences & Events</h2>
+        <div class="events">
+            <div class="event">
+                <h3>Bump Festival</h3>
+                <p>Kortijk, BE</p>
+                <p>Design Trends</p>
+            </div>
+            <div class="event">
+                <h3>FCR Creative</h3>
+                <p>Paris, FR</p>
+                <p>Creativity</p>
+            </div>
+            <div class="event">
+                <h3>OFFF Festival</h3>
+                <p>Barcelona, ES</p>
+                <p>New Vision</p>
+            </div>
+            <div class="event">
+                <h3>Open Studio</h3>
+                <p>Glasgow, UK</p>
+                <p>Trends & Hype</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Awards Section -->
+    <section id="awards" class="awards">
+        <h2>Personal Awards</h2>
+        <div class="award-slider">
+            <div class="award">
+                <h3>World Brand Design Awards</h3>
+                <p>Description about this award</p>
+            </div>
+            <div class="award">
+                <h3>The Young Ones ADC Competition</h3>
+                <p>Description about this award</p>
+            </div>
+            <div class="award">
+                <h3>Graphic Design USA Award</h3>
+                <p>Description about this award</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <nav class="navbar navbar-expand-lg" id="mainNav">
+            <div class="nav-footer">
+                <a href="#page-top"><img class="logo" src="./Assets/b-logo.png" alt="Logo"> <img class="logo-text" src="./Assets/BM-text.png" alt=""></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fas fa-bars ms-1"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li><a class="nav-item" href="#works">Works</a></li>
+                        <li><a class="nav-item" href="#about">About</a></li>
+                        <li><a class="nav-item" href="#awards">Awards</a></li>
+                    </ul>
+                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                        <li class="copyright-item"><span class="copyright">&copy; 2025 Bukhoury Muslim.</span><span class="copyright">All Rights Reserved.</span></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </footer>
+
+    <script>
+        // Open Modal
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = "block";
+        }
+
+        // Close Modal
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = "none";
+        }
+
+        // Close modal when clicking outside
+        window.onclick = function (event) {
+            const modals = document.querySelectorAll(".modal");
+            modals.forEach((modal) => {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

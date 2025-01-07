@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100..900&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: #f0f8ff;
+    color: black;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Start of Scrollbar */
+body::-webkit-scrollbar {
+    width: 0.2em;
+  }
+  
+  body::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 20px;
+  }
+  
+  body::-webkit-scrollbar-track {
+    background: transparent;
+  }
+/* End of Scrollbar */
+
+h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 4rem;
+    line-height: 1;
+    font-family: 'League Spartan', sans-serif;
+}
+
+h2 {
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: 300;
+    font-family: 'League Spartan', sans-serif;
+}
+
+p {
+    font-size: 2rem;
+    line-height: 1.5;
+    font-weight: 400;
+    font-family: 'League Spartan', sans-serif;
+}
+
+.description {
+    font-size: 2rem;
+    line-height: 1;
+    font-weight: 300;
+    font-family: 'League Spartan', sans-serif;
+    text-align: justify;
+}
+
+.copyright-item {
+    display: flex;
+    flex-direction: column;
+}
+.copyright {
+    font-size: 1rem;
+    line-height: 1;
+    font-family: 'League Spartan', sans-serif;
+}
+.hero-text {
+    width: 500px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+/* Navbar */
+nav {
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    z-index: 1;
+}
+nav .nav-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    margin: 16px 108px 0 108px;
+}
+
+.logo {
+    width: 40px;
+    height: 40px;
+}
+
+.logo-text {
+    width: 100px;
+    height: 50px;
+}
+
+nav ul {
+    gap: 30px;
+}
+
+.nav-item {
+    font-size: 18px;
+    font-weight: bolder;
+    font-family: 'League Spartan', sans-serif;
+}
+.fb img {
+    width: 40px;
+    height: 40px;
+}
+.ig img {
+    margin-top: 2px;
+    width: 35px;
+    height: 35px;
+}
+
+header.masthead {
+    position: relative;
+    padding-top: 10rem;
+    padding-bottom: 5rem;
+    text-align: left;
+    color: #000000;
+}
+header.masthead > .container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 108px;
+}
+.works-btn {
+    display: inline-block;
+    padding: 8px 15px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    background: #FFA500;
+    font-family: 'League Spartan', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease-in-out;
+}
+.works-btn:hover {
+    background: #000000;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+.works-btn:active {
+    transform: scale(1);
+}
+.works-icon path {
+    fill: black;
+    transition: all 0.3s ease-in-out;
+}
+.works-btn:hover .works-icon path {
+    fill: #ffffff;
+}
+
+/* Work Section */
+.works {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 8rem;
+    padding-bottom: 5rem;
+    background: #f0f8ff;
+    color: #000000;
+}
+.works h2 {
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+}
+.work-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 70px;
+}
+.work-part {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 40px;
+    width: 80rem;
+    height: 22rem;
+}
+.work-text {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 70%;
+    height: fit-content;
+    height: 100%;
+}
+.work-text button, .work-text a {
+    margin: auto 0 0 0;
+    width: fit-content;
+}
+.work-img {
+    width: 960px;
+    height: 480px;
+}
+.work-item {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem 2rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 10px;
+    transition: all 0.3s ease-in-out;
+}
+.work-item:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.work-item h3 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.work-item h4 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.work-item p {
+    font-size: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 50px;
+}
+
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 900px;
+    position: relative;
+}
+
+.modal-content h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.modal-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.modal-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.modal-gallery img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease-in-out;
+}
+
+.modal-gallery img:hover {
+    transform: scale(1.05);
+}
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    color: #000;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+
+/* Footer */
+footer {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+    padding: 0;
+    background: aliceblue;
+    color: #000000;
+}
+nav .nav-footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    justify-items: center;
+    margin: 0 48px 16px 48px;
+}
