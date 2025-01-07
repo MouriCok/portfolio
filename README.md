@@ -18,9 +18,9 @@ Detailed descriptions of some of my notable projects:
 
 ### 3. Skills
 A list of technical skills, including:
-- Programming: C++, Java, PHP, JavaScript, Python
+- Programming: C++, HTML5, CSS3, Java, PHP, JavaScript, Python
 - Frameworks: Flutter, Bootstrap
-- Tools: Git, GitHub
+- Tools: Git, GitHub, GODOT, Unity
 
 ### 4. Contact
 - **Email:** [mbukhoury.mb@gmail.com](mailto:mbukhoury.mb@gmail.com)
