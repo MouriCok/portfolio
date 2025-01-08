@@ -1,5 +1,5 @@
 <div align="center">
-  <img src="" alt="MouriCok" width="200">
+  <img src="./Assets/b-logo.png" alt="MouriCok" width="200">
 </div>
 
 # Personal Portfolio Website
