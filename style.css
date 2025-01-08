@@ -265,6 +265,21 @@ header.masthead > .container {
     margin: 0;
     padding: 0;
 }
+.item-head {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
+    gap: 20px;
+}
+.work-logo {
+    width: 200px;
+    height: 200px;
+    margin: 0;
+    padding: 0;
+    object-fit: contain;
+}
 
 /* Modal Styles */
 .modal {
@@ -275,20 +290,39 @@ header.masthead > .container {
     top: 0;
     width: 100%;
     height: 100%;
-    overflow: auto;
     background-color: rgba(0, 0, 0, 0.8);
-    padding-top: 50px;
+    overflow: hidden; /* Prevents modal from overflowing the viewport */
+    padding: 0;
+}
+
+.modal.open {
+    display: block; /* Show modal */
 }
 
 .modal-content {
     background-color: white;
-    margin: auto;
+    margin: 48px auto;
     padding: 20px;
-    border-radius: 10px;
+    border-radius: 10px 0 0 10px;
     width: 80%;
     max-width: 900px;
-    position: relative;
+    height: 90%; /* Ensure modal content is contained within the screen */
+    overflow: auto; /* Makes the content inside modal scrollable */
+    position: relative; /* Keeps close button positioned correctly */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Adds shadow for better visibility */
 }
+.modal-content::-webkit-scrollbar {
+    width: 0.2em;
+  }
+  
+  .modal-content::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 20px;
+  }
+  
+  .modal-content::-webkit-scrollbar-track {
+    background: white;
+  }
 
 .modal-content h2 {
     font-size: 2rem;
@@ -306,6 +340,8 @@ header.masthead > .container {
     flex-wrap: wrap;
     gap: 20px;
     justify-content: center;
+    align-items: center;
+    margin-top: 20px;
 }
 
 .modal-gallery img {
@@ -316,9 +352,9 @@ header.masthead > .container {
     transition: transform 0.3s ease-in-out;
 }
 
-.modal-gallery img:hover {
+/* .modal-gallery img:hover {
     transform: scale(1.05);
-}
+} */
 
 .close {
     position: absolute;
@@ -332,6 +368,209 @@ header.masthead > .container {
 
 .close:hover {
     color: red;
+}
+
+/* Smooth open and close animation */
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.modal.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Recent Activities */
+.activities {
+  padding-top: 6rem;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activities-container {
+  display: flex;
+  margin: 0 auto;
+  padding: 16px 48px;
+  width: 80rem;
+  height: 32rem;
+  background-color: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #000000;
+  gap: 2rem;
+}
+
+.activities-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: auto 0;
+  width: 30%;
+  height: 26rem;
+}
+
+.activities-text h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.pagination-lines {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin: 0;
+}
+
+.previous-icon {
+    width: 20px;
+}
+.next-icon {
+    width: 20px;
+}
+
+.pagination-lines span {
+  display: inline-block;
+  height: 10px;
+  width: 30px;
+  background-color: #FFA500;
+  opacity: 0.5;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  
+  /* Add heartbeat animation for non-active spans */
+  animation: heartbeat 2s infinite;
+}
+
+.pagination-lines span.active {
+  opacity: 1;
+  width: 60px;
+  animation: none; /* Disable animation for the active span */
+}
+
+.pagination-lines span:hover {
+  opacity: 0.8;
+  transform: scale(1.1);
+}
+
+/* Define the heartbeat animation */
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.2);
+  }
+  50% {
+    transform: scale(1);
+  }
+  70% {
+    transform: scale(1.15);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.activities-text p {
+  font-size: 1.3rem;
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: 'League Spartan', sans-serif;
+  margin: 1rem 0;
+  text-align: justify;
+}
+
+.view-case-button {
+  display: inline-block;
+  padding: 0.8rem 1.5rem;
+  width: fit-content;
+  background-color: #ff4d4f;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.view-case-button:hover {
+  background-color: #e63946;
+}
+
+.activities-showcase {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto 0;
+  height: 26rem;
+  width: 100%;
+}
+
+.showcase-box {
+  width: 100%;
+  height: 300px;
+  background: repeating-linear-gradient(
+    45deg,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.1) 10px,
+    transparent 10px,
+    transparent 20px
+  );
+  border: 2px solid rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+.showcase-image {
+    display: none;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.showcase-image.active {
+    display: block; /* Only display the active image */
+}
+
+/* Awards */
+.awards {
+    padding-top: 8rem;
+    text-align: center;
+}
+.awards h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+.awards-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.award {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+}
+.award:hover {
+    transform: scale(1.05);
+}
+.award h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+.award p {
+    font-size: 1rem;
+    line-height: 1.6;
 }
 
 /* Footer */
@@ -350,5 +589,5 @@ nav .nav-footer {
     justify-content: space-between;
     align-items: center;
     justify-items: center;
-    margin: 0 48px 16px 48px;
+    margin: 0 108px 16px 108px;
 }

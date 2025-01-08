@@ -20,8 +20,8 @@
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
                     <li><a class="nav-item" href="#works">Works</a></li>
-                    <li><a class="nav-item" href="#about">About</a></li>
-                    <li><a class="nav-item" href="#awards">Awards</a></li>
+                    <li><a class="nav-item" href="#activities">Activities</a></li>
+                    <!-- <li><a class="nav-item" href="#awards">Awards</a></li> -->
                 </ul>
                 <ul class="navbar-nav ms-auto py-4 py-lg-0">
                     <li><a class="nav-icon fb" href="https://www.facebook.com/muhammad.bukhoury/" target="_blank"><img src="./Assets/facebook.png" alt="Facebook"></a></li>
@@ -61,9 +61,13 @@
         <div class="work-items">
             <div class="work-part">
                 <div class="work-item">
-                    <h3>01</h3>
-                    <h4>PlayZone</h4>
-                    
+                    <div class="item-head">
+                        <h3>01</h3>
+                        <h4>PlayZone</h4>
+                    </div>
+                    <div class="item-body">
+                        <img class="work-logo" src="./Assets/PZ_tp.png" alt="PlayZone Logo">
+                    </div>
                 </div>
                 <div class="work-text">
                     <p>Sport Facility Booking System</p>
@@ -78,16 +82,24 @@
                     <button type="button" class="works-btn" onclick="openModal('sentuhanModal')">View Details</button>
                 </div>
                 <div class="work-item">
-                    <h3>02</h3>
-                    <h4>Sentuhan<br>Isyarat</h4>
-                    
+                    <div class="item-head">
+                        <h3>02</h3>
+                        <h4>Sentuhan<br>Isyarat</h4>
+                    </div>
+                    <div class="item-body">
+                        <img class="work-logo" src="./Assets/hand-gesture.png" alt="PlayZone Logo">
+                    </div>
                 </div>
             </div>
             <div class="work-part">
                 <div class="work-item">
-                    <h3>03</h3>
-                    <h4>Others</h4>
-                    
+                    <div class="item-head">
+                        <h3>03</h3>
+                        <h4>Others</h4>
+                    </div>
+                    <div class="item-body">
+                        <img class="work-logo" src="./Assets/github-mark.png" alt="PlayZone Logo">
+                    </div>
                 </div>
                 <div class="work-text">
                     <p>All remaining projects I have worked on</p>
@@ -98,34 +110,43 @@
         </div>
     </section>
 
-    <!-- Modals -->
+    <!-- PlayZone Modal -->
     <div id="playzoneModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('playzoneModal')">&times;</span>
-            <h2>PlayZone</h2>
-            <p>A comprehensive Sport Facility Booking System designed to streamline reservations, manage payments, and improve user experience. This project includes both a web application and a mobile app.</p>
+            <h4 style="font-weight: 600;">PlayZone</h4>
+            <span class="description">
+                A comprehensive Sport Facility Booking System designed to streamline reservations, manage payments, and improve user experience.
+            </span>
             <div class="modal-gallery">
                 <img src="./Assets/PlayZone-Homepage.png" alt="PlayZone Homepage">
-                <img src="./Assets/PlayZone-Features.png" alt="PlayZone Features">
-                <img src="./Assets/PlayZone-Admin.png" alt="PlayZone Admin Panel">
+                <img src="./Assets/PlayZone-Auth.png" alt="PlayZone Auth">
+                <img src="./Assets/PlayZone-Profile.png" alt="PlayZone Profile">
+                <img src="./Assets/PlayZone-Booking.png" alt="PlayZone Booking">
             </div>
         </div>
     </div>
 
+    <!-- Sentuhan Modal -->
     <div id="sentuhanModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeModal('sentuhanModal')">&times;</span>
-            <h2>Sentuhan Isyarat</h2>
-            <p>A Sign Language Detection Website developed to bridge the communication gap for individuals with hearing disabilities. The project leverages AI models to detect and translate sign language into text in real time.</p>
+            <h4 style="font-weight: 600;">Sentuhan Isyarat</h4>
+            <span class="description">
+                A Sign Language Detection Website developed to bridge the communication gap for individuals with hearing disabilities. 
+                The project leverages AI models to detect and translate sign language into text in real time.
+            </span>
             <div class="modal-gallery">
                 <img src="./Assets/SentuhanIsyarat-Homepage.png" alt="Sentuhan Isyarat Homepage">
+                <img src="./Assets/SentuhanIsyarat-Auth.png" alt="Sentuhan Isyarat Auth">
+                <img src="./Assets/SentuhanIsyarat-Services.png" alt="Sentuhan Isyarat Services">
                 <img src="./Assets/SentuhanIsyarat-Detection.png" alt="Sentuhan Isyarat Detection">
             </div>
         </div>
     </div>
 
     <!-- Conferences Section -->
-    <section id="conferences" class="conferences">
+    <!-- <section id="conferences" class="conferences">
         <h2>Conferences & Events</h2>
         <div class="events">
             <div class="event">
@@ -149,10 +170,38 @@
                 <p>Trends & Hype</p>
             </div>
         </div>
+    </section> -->
+
+    <!-- Recent Activities -->
+    <section id="activities" class="activities">
+    <div class="activities-container">
+        <!-- Text Section -->
+        <div class="activities-text">
+        <h2>2024 | Best of the best</h2>
+        <div class="pagination-lines">
+            <img class="previous-icon" src="./Assets/previous.svg" alt="previous">
+            <span data-image="./Assets/End-Nebuva.jpg"></span>
+            <span data-image="./Assets/Preparing.jpg"></span>
+            <span data-image="./Assets/Waiting.jpg"></span>
+            <img class="next-icon" src="./Assets/previous.svg" alt="next" style="transform: rotate(180deg); transform-origin: center;">
+        </div>
+        <p>
+            On this day, my group and I successfully completed the Medical Post Box project to meet
+            the requirements for passing the ENTREPRENEUR subject under the NEBUVA Competition program
+            sponsored by UiTM Perlis Branch itself.
+        </p>
+        </div>
+        <!-- Image Section -->
+        <div class="activities-showcase">
+            <img class="showcase-image active" src="./Assets/End-Nebuva.jpg" alt="">
+            <img class="showcase-image" src="./Assets/Preparing.jpg" alt="">
+            <img class="showcase-image" src="./Assets/Waiting.jpg" alt="">
+        </div>
+    </div>
     </section>
 
     <!-- Awards Section -->
-    <section id="awards" class="awards">
+    <!-- <section id="awards" class="awards">
         <h2>Personal Awards</h2>
         <div class="award-slider">
             <div class="award">
@@ -168,7 +217,7 @@
                 <p>Description about this award</p>
             </div>
         </div>
-    </section>
+    </section> -->
 
     <!-- Footer -->
     <footer>
@@ -180,11 +229,11 @@
                     <i class="fas fa-bars ms-1"></i>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarResponsive">
-                    <ul class="navbar-nav ms-auto py-4 py-lg-0">
+                    <!-- <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li><a class="nav-item" href="#works">Works</a></li>
-                        <li><a class="nav-item" href="#about">About</a></li>
+                        <li><a class="nav-item" href="#activities">Activities</a></li>
                         <li><a class="nav-item" href="#awards">Awards</a></li>
-                    </ul>
+                    </ul> -->
                     <ul class="navbar-nav ms-auto py-4 py-lg-0">
                         <li class="copyright-item"><span class="copyright">&copy; 2025 Bukhoury Muslim.</span><span class="copyright">All Rights Reserved.</span></li>
                     </ul>
@@ -194,25 +243,88 @@
     </footer>
 
     <script>
-        // Open Modal
+        // Select pagination spans and all images
+        const paginationSpans = document.querySelectorAll('.pagination-lines span');
+        const showcaseImages = document.querySelectorAll('.showcase-image');
+
+        // Add event listeners to each span
+        paginationSpans.forEach((span, index) => {
+            span.addEventListener('click', () => {
+                // Update the active image
+                showcaseImages.forEach((image, i) => {
+                    if (i === index) {
+                        image.classList.add('active'); // Show the selected image
+                    } else {
+                        image.classList.remove('active'); // Hide others
+                    }
+                });
+
+                // Highlight the active span
+                paginationSpans.forEach((s) => s.style.opacity = 0.5); // Reset opacity
+                span.style.opacity = 1; // Highlight current span
+            });
+        });
+
+        // Set initial active pagination highlight
+        paginationSpans[0].style.opacity = 1;
+
+        // Function to update active states
+        function updateActiveState(index) {
+            // Update active image
+            showcaseImages.forEach((image, i) => {
+                image.classList.toggle('active', i === index); // Toggle active class
+            });
+
+            // Update active pagination span
+            paginationSpans.forEach((span, i) => {
+                span.classList.toggle('active', i === index); // Toggle active class
+            });
+        }
+
+        // Add click event listeners to pagination spans
+        paginationSpans.forEach((span, index) => {
+            span.addEventListener('click', () => {
+                updateActiveState(index); // Update state based on the clicked span
+            });
+        });
+
+        // Initialize the first span and image as active
+        updateActiveState(0);
+
+        // Function to open the modal
         function openModal(modalId) {
-            document.getElementById(modalId).style.display = "block";
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('open');
+                document.body.style.overflow = 'hidden'; // Prevent background scrolling
+            }
         }
 
-        // Close Modal
+        // Function to close the modal
         function closeModal(modalId) {
-            document.getElementById(modalId).style.display = "none";
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('open');
+                document.body.style.overflow = ''; // Restore background scrolling
+            }
         }
 
-        // Close modal when clicking outside
-        window.onclick = function (event) {
-            const modals = document.querySelectorAll(".modal");
-            modals.forEach((modal) => {
+        // Add event listeners to close buttons
+        document.querySelectorAll('.close').forEach((closeBtn) => {
+            closeBtn.addEventListener('click', () => {
+                const modal = closeBtn.closest('.modal');
+                closeModal(modal.id);
+            });
+        });
+
+        // Optional: Close modal by clicking outside the modal content
+        document.querySelectorAll('.modal').forEach((modal) => {
+            modal.addEventListener('click', (event) => {
                 if (event.target === modal) {
-                    modal.style.display = "none";
+                    closeModal(modal.id);
                 }
             });
-        };
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
 </body>
