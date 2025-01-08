@@ -68,7 +68,9 @@ p {
     font-family: 'League Spartan', sans-serif;
 }
 .hero-text {
-    width: 500px;
+    max-width: 500px;
+    width: 100%;
+    text-align: right;
 }
 
 ul {
@@ -142,6 +144,13 @@ header.masthead > .container {
     justify-content: center;
     gap: 108px;
 }
+.hero-image img {
+    object-fit: contain;
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    max-height: 500px;
+}
 .works-btn {
     display: inline-block;
     padding: 8px 15px;
@@ -179,6 +188,11 @@ header.masthead > .container {
 
 /* Work Section */
 .works {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    justify-items: center;
     width: 100%;
     margin: 0 auto;
     padding-top: 8rem;
@@ -194,6 +208,7 @@ header.masthead > .container {
 .work-items {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     justify-items: center;
@@ -202,12 +217,13 @@ header.masthead > .container {
 .work-part {
     display: flex;
     flex-direction: row;
-    align-items: center;
-    justify-content: center;
+    align-items: flex-start;
+    justify-content: space-between;
     justify-items: center;
     gap: 40px;
     width: 80rem;
     height: 22rem;
+    box-sizing: border-box;
 }
 .work-text {
     display: flex;
@@ -223,6 +239,10 @@ header.masthead > .container {
 .work-text button, .work-text a {
     margin: auto 0 0 0;
     width: fit-content;
+}
+.work-text-right {
+    text-align: right;
+    align-items: end;
 }
 .work-img {
     width: 960px;
@@ -308,6 +328,7 @@ header.masthead > .container {
     max-width: 900px;
     height: 90%; /* Ensure modal content is contained within the screen */
     overflow: auto; /* Makes the content inside modal scrollable */
+    -webkit-overflow-scrolling: touch;
     position: relative; /* Keeps close button positioned correctly */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Adds shadow for better visibility */
 }
@@ -590,4 +611,199 @@ nav .nav-footer {
     align-items: center;
     justify-items: center;
     margin: 0 108px 16px 108px;
+}
+
+/* Responsive Design for Mobile */
+
+/* Adjust layout and spacing for screens below 768px */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .logo {
+        margin-bottom: 16px;
+    }
+
+    nav .nav-container {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 16px;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    header.masthead {
+        padding-top: 8rem;
+        padding-bottom: 2rem;
+        text-align: center;
+    }
+
+    header.masthead > .container {
+        flex-direction: column;
+        gap: 32px;
+    }
+
+    .hero-text {
+        text-align: center;
+    }
+
+    .hero-text h2, .hero-text h1, .hero-text p {
+        font-size: 2.5rem;
+        line-height: 1.5;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+        max-height: 200px;
+    }
+
+    .works {
+        padding-top: 8rem;
+        padding-bottom: 3rem;
+        text-align: center;
+    }
+
+    .description {
+        margin-bottom: 10px;
+    }
+
+    .works-btn {
+        font-size: 0.8rem;
+    }
+
+    .work-text button, .work-text a {
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    .work-text-right {
+        text-align: center;
+    }
+
+    .work-items {
+        flex-direction: column;
+        gap: 600px;
+    }
+
+    .work-item:hover {
+        transform: none;
+    }
+
+    .work-part {
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .work-text, .work-item {
+        width: 90%;
+        height: max-content;
+    }
+
+    .activities {
+        margin-top: 27rem;
+    }
+
+    .activities-container {
+        flex-direction: column;
+        width: 90%;
+        height: auto;
+        padding: 16px;
+    }
+
+    .activities-text {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .activities-showcase {
+        height: auto;
+    }
+
+    .modal-content {
+        width: 95%;
+        height: auto;
+    }
+
+    .pagination-lines span {
+        height: 8px;
+        width: 20px;
+    }
+
+    .view-case-button {
+        padding: 0.6rem 1rem;
+        border-radius: 20px;
+    }
+
+    .modal-content {
+        width: 95%; /* Use almost full screen width */
+        height: 85%; /* Fit within smaller screens */
+    }
+
+    .close {
+        font-size: 20px;
+    }
+}
+
+/* Adjust for even smaller screens below 480px */
+@media screen and (max-width: 480px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    p, .description {
+        font-size: 1rem;
+    }
+
+    .work-part {
+        flex-direction: column;
+    }
+
+    .work-item img {
+        max-width: 80%; /* Smaller images */
+    }
+
+    .works-btn {
+        font-size: 0.9rem;
+        padding: 5px 10px;
+    }
+
+    .hero-text, .work-text {
+        max-width: 100%;
+        align-items: center;
+        justify-content: center;
+        justify-items: center;
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .activities-text h2 {
+        font-size: 1.8rem;
+    }
+
+    .activities-text p {
+        font-size: 1rem;
+    }
+
+    .close {
+        font-size: 20px;
+    }
+
+    .pagination-lines span {
+        height: 6px;
+        width: 15px;
+    }
 }
